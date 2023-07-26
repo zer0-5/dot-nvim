@@ -5,6 +5,7 @@ return {
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope-file-browser.nvim",
+            "debugloop/telescope-undo.nvim",
         },
         cmd = "Telescope",
         keys = {
@@ -18,6 +19,7 @@ return {
                 ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
                 desc = "browse files from current directory"
             },
+            { "<leader>u", ":Telescope undo<cr>", desc = "[u]ndo tree" },
         },
         config = function()
             local telescope = require("telescope")
@@ -39,6 +41,7 @@ return {
                 },
             })
             telescope.load_extension("file_browser")
+            telescope.load_extension("undo")
         end,
     },
     "nvim-telescope/telescope-ui-select.nvim",

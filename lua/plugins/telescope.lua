@@ -6,6 +6,7 @@ return {
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope-file-browser.nvim",
             "debugloop/telescope-undo.nvim",
+            'nvim-telescope/telescope-symbols.nvim',
         },
         cmd = "Telescope",
         keys = {

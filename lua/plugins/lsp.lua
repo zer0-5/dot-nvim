@@ -28,6 +28,10 @@ return {
             local cmp = require("cmp")
 
             cmp.setup({
+                sources = {
+                    { name = "copilot" },
+                    { name = "nvim_lsp" },
+                },
                 mapping = {
                     ['<C-k>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
                     ['<C-j>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
